@@ -8,16 +8,16 @@
  */
 int main(void)
 {
-	char letter;
+char letter;
 
-	for (letter = 'a' ; letter <= 'z' ; letter++)
-	{
-	putchar(letter);
-	}
-	for (letter = 'A' ; letter <= 'Z' ; letter++)
-        {
-        putchar(letter);
-        }
-	printf("\n");
-	return (0);
+for (letter = 'a' ; letter <= 'z' ; letter++)
+{
+putchar(letter);
+}
+for (letter = 'A' ; letter <= 'Z' ; letter++)
+{
+putchar(letter);
+}
+printf("\n");
+return (0);
 }
