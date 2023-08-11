@@ -2,7 +2,7 @@
 /**
  * main - Entry point of the program
  *
- * This function prints the size of various types on the computer using the sizeof function.
+ * This function prints the size of various types  using the sizeof function.
  *
  * Return: Always 0 (Success)
  */
