@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c -S  -Wall -pedantic -Werror -Wextra -std=gnu89 $CFILE > main.s
+gcc -c -S -masm=intel -Wall -pedantic -Werror -Wextra -std=gnu89 $CFILE -o main.s
