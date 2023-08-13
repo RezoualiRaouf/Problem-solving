@@ -2,7 +2,7 @@
 /**
  * main - Entry point of the program
  *
- * This function prints numbers from 01 to 98
+ * This function prints numbers from 012 to 789
  *
  * Return: Always 0 (Success)
  */
@@ -12,9 +12,9 @@ int main(void)
 
 	for (i = 0 ; i <= 7 ; i++)
 	{
-		for (j = i+1 ; j <= 8 ; j++)
+		for (j = i + 1 ; j <= 8 ; j++)
 		{
-			for (k = i+2 ; k <= 9 ; k++)
+			for (k = j + 1 ; k <= 9 ; k++)
 			{
 				putchar('0' + i);
 				putchar('0' + j);
