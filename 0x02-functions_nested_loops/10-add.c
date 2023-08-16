@@ -1,5 +1,11 @@
 #include "main.h"
-
+/**
+ * add - Adds two integers.
+ * @a: The first integer.
+ * @b: The second integer.
+ *
+ * Return: The sum of the two integers.
+ */
 int add(int a, int b)
 {
 int sum;
@@ -17,7 +23,8 @@ else if (b < 0)
 	b = b * (-1);
 	sum = a - b;
 
-}else if (a < 0 && b < 0)
+}
+else if (a < 0 && b < 0)
 {
 	sum = a + b;
 
