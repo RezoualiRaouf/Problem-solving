@@ -8,6 +8,12 @@
 int print_last_digit(int n)
 {
 	int digit;
+
+	if (n == INT_MIN)
+	{
+		digit = 8;
+		_putchar('0' + digit);
+	}
 	if (n >= 0)
 	{
 		digit = n % 10;
