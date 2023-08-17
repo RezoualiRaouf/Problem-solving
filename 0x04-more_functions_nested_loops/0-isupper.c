@@ -18,5 +18,4 @@ for (letter = 'A' ; letter <= 'Z' ; letter++)
 	}
 }
 	return (count);
-	_putchar('\n');
 }
