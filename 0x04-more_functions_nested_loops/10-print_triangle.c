@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_diagonal - print triangle, followed by a new line
+ * print_triangle - print triangle, followed by a new line
  *
- * @n: number of times the character # should be printed
+ * @size: number of times the character # should be printed
  */
 void print_triangle(int size)
 {
@@ -13,11 +13,11 @@ void print_triangle(int size)
 	{
 		_putchar('\n');
 	}
-	else 
+	else
 	{
 	for (i = 0 ; i < size ; i++)
 	{
-		for (j = 0; j <size - i - 1; j++)
+		for (j = 0; j < size - i - 1; j++)
 		{
 			_putchar(' ');
 		}
