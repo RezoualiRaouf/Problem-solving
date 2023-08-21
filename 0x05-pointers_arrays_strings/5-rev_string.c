@@ -14,7 +14,7 @@ while (*p != '\0')
 	p++;
 }
 p--;
-for (i = 0 ; i <= n / 2 ; i++)
+for (i = 0 ; i < n / 2 ; i++)
 {
 	temp = *s;
 	*s = *p;
