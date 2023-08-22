@@ -5,7 +5,7 @@
  */
 void puts_half(char *str)
 {
-	int l = 0;
+	int l = 0, mid;
 	char *p = str;
 
 while (*p != '\0')
@@ -13,11 +13,11 @@ while (*p != '\0')
 	l++;
 	p++;
 }
-p--;
+mid = l / 2;
 if (l % 2 == 0)
-	p = str + (l / 2);
+	p = str + mid;
 else
-	p = str + (l - 1) / 2;
+	p = str + mid + 1;
 while (*p != '\0')
 {
 	_putchar(*p);
