@@ -9,23 +9,21 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-    char *point_dest = dest;
+	char *point_dest = dest;
 
-    while (n > 0 && *src != '\0')
-    {
-        *dest = *src;
-        src++;
-        dest++;
-        n--;
-    }
+	while (n > 0 && *src != '\0')
+	{
+		*dest = *src;
+		src++;
+		dest++;
+		n--;
+	}
 
-    while (n > 0)
-    {
-        *dest = '\0';
-        dest++;
-        n--;
-    }
-
-    return (point_dest);
+	while (n > 0)
+	{
+		*dest = '\0';
+		dest++;
+		n--;
+	}
+	return (point_dest);
 }
-
