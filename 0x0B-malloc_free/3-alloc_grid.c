@@ -21,13 +21,15 @@ if (matrix == NULL)
 for (i = 0 ; i < height ; i++)
 {
 	matrix[i] = malloc(width * sizeof(int));
-	if (matrix[i])
-		return (NULL);
-
-	for (j = 0 ; j < width ; j++)
+	if (matrix[i] = NULL)
 	{
-		matrix[i][j] = 0;
+		for (j = 0 ; j < i ; j++)
+			free(matrix[j]);
+		free(matrix);
+		return (NULL);
 	}
+	for (j = 0 ; j < width ; j++)
+		matrix[i][j] = 0;
 }
 return (matrix);
 }
