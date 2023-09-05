@@ -20,7 +20,7 @@ else
 		ss++;
 		size++;
 	}
-	sback = malloc(sizeof(char) * size);
+	sback = malloc(sizeof(char) * (size + 1));
 
 	if (sback == NULL)
 		return (NULL);
