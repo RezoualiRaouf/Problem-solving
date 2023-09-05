@@ -13,11 +13,11 @@ int **matrix, i;
 
 if (width <= 0 || height <= 0)
 	return (NULL);
-matrix = calloc(height, sizeof(int));
+matrix = malloc(height * sizeof(int));
 if (matrix == NULL)
 	return (NULL);
 for (i = 0 ; i < height ; i++)
-	matrix[i] = calloc(width, sizeof(int));
+	matrix[i] = malloc(width * sizeof(int));
 if (matrix[i])
 	return (NULL);
 return (matrix);
