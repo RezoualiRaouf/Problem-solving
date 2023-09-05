@@ -20,7 +20,7 @@ while (*ss != '\0')
 	ss++, size2++;
 while (*s != '\0')
 	s++, size1++;
-back = malloc(sizeof(char) * (size2 + size1));
+back = malloc(sizeof(char) * (size2 + size1 + 1));
 if (back == NULL)
 	return (NULL);
 while (i < size1)
