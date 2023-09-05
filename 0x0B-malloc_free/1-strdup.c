@@ -31,6 +31,7 @@ else
 		sback[i] = str[i];
 		i++;
 	}
+	sback[i] = '\0';
 	return (sback);
 }
 }
