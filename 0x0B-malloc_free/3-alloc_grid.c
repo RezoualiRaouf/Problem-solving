@@ -21,7 +21,7 @@ if (matrix == NULL)
 for (i = 0 ; i < height ; i++)
 {
 	matrix[i] = malloc(width * sizeof(int));
-	if (matrix[i] = NULL)
+	if (matrix[i] == NULL)
 	{
 		for (j = 0 ; j < i ; j++)
 			free(matrix[j]);
