@@ -1,5 +1,14 @@
 #include <stdlib.h>
 #include "main.h"
+
+char *_memset(char *s, char b, unsigned int n)
+{
+char *ptr = s;
+
+while (n--)
+	*s++ = b;
+return (ptr);
+}
 /**
  * _calloc - Allocate memory for an array
  * @nmemb: Number of elements
@@ -10,17 +19,12 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *back;
-	char *ptr;
-	int sz = 0;
 
 if (nmemb == 0 || size == 0)
 	return (NULL);
-back = malloc(size * nmemb);
+back = malloc(sizeof(int) * nmemb);
 if (back == NULL)
 	return (NULL);
-ptr = (char *)back;
-while (ptr[sz] != '\0')
-	ptr[sz] = 0, sz++;
-ptr[sz] = '\0';
+_memset(back, 0, sizeof(int) * nmemb);
 return (back);
 }
