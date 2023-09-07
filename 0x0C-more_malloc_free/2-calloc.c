@@ -1,6 +1,13 @@
 #include <stdlib.h>
 #include "main.h"
-
+/**
+ * _memset - Set the memory pointed to by s to the specified value
+ * @s: Pointer to the memory to be filled
+ * @b: Value to set the memory to
+ * @n: Number of bytes to fill
+ *
+ * Return: A pointer to the memory area s
+ */
 char *_memset(char *s, char b, unsigned int n)
 {
 char *ptr = s;
