@@ -21,6 +21,6 @@ if (back == NULL)
 ptr = (char *)back;
 while (ptr[sz] != '\0')
 	ptr[sz] = 0, sz++;
-
+ptr[sz] = '\0';
 return (back);
 }
