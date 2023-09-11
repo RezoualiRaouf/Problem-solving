@@ -1,6 +1,6 @@
 #include "dog.h"
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
  * new_dog - Creates a new dog.
  * @name: The name of the dog.
@@ -18,9 +18,11 @@ if (pd == NULL)
 pd->name = malloc(sizeof(name) + 1);
 if (pd->name == NULL)
 	return (NULL);
+pd->name = name;
 pd->owner = malloc(sizeof(pd->owner) + 1);
 if (pd->owner == NULL)
 	return (NULL);
+pd->owner = owner;
 pd->age = age;
 
 return (pd);
