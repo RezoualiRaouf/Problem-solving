@@ -26,4 +26,5 @@ for (i = 0 ; i < n ; i++)
 	else
 		printf("%d\n", prnum);
 }
+va_end(ptlist);
 }
