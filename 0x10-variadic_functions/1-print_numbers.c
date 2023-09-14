@@ -11,8 +11,6 @@ unsigned int i;
 int prnum;
 va_list ptlist;
 
-if (n == 0)
-	return;
 va_start(ptlist, n);
 for (i = 0 ; i < n ; i++)
 {
@@ -24,7 +22,8 @@ for (i = 0 ; i < n ; i++)
 			printf("%s", separator);
 	}
 	else
-		printf("%d\n", prnum);
+		printf("%d", prnum);
 }
+printf("\n");
 va_end(ptlist);
 }
