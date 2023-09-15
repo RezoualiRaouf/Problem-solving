@@ -1,39 +1,60 @@
 #include "variadic_functions.h"
+/**
+ * print_int - Print an integer.
+ * @ptlist: A va_list pointing to the argument.
+ */
+
 void print_int(va_list ptlist)
 {
 int value = va_arg(ptlist, int);
 printf("%d", value);
 }
 
+/**
+ * print_char - Print a character.
+ * @ptlist: A va_list pointing to the argument.
+ */
 void print_char(va_list ptlist)
 {
 char value = va_arg(ptlist, int);
 printf("%c", value);
 }
 
+/**
+ * print_float - Print a floating-point number.
+ * @ptlist: A va_list pointing to the argument.
+ */
 void print_float(va_list ptlist)
 {
 float value = va_arg(ptlist, double);
 printf("%f", value);
 }
+
+/**
+ * print_string - Print a string.
+ * @ptlist: A va_list pointing to the argument.
+ */
 void print_string(va_list ptlist)
 {
 char *value = va_arg(ptlist, char *);
-if (value == NULL)
-	printf("(nil)");
-else
-	printf("%s", value);
+printf("%s", (value != NULL) ? value : "(nil)");
 }
-typedef struct data
-{
-const char *ch;
-void (*f)(va_list ptlist);
-}data;
+
+/**
+ * print_all - Print values based on format specifiers.
+ * @format: A format string containing specifiers.
+ *             - 'c': char
+ *             - 'i': int
+ *             - 'f': float
+ *             - 's': string
+ *             - NULL: End of format
+ */
 void print_all(const char * const format, ...)
 {
 va_list  ptlist;
 int i = 0;
-const char * current_format = format;
+const char *current_format = format;
+
 data ar[] =  {
 	{"i", print_int},
 	{"c", print_char},
