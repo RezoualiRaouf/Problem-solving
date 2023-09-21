@@ -14,11 +14,12 @@ size_t n = 0;
 while (current != NULL)
 {
 	if (current->str == NULL)
-		printf("[0] (nil)\n");
+		printf("[0] (nil)");
 	else
-	printf("[%d] %s\n", current->len, current->str);
+		printf("[%d] %s", current->len, current->str);
 current = current->next;
 n++;
+printf("\n");
 }
 return (n);
 }
