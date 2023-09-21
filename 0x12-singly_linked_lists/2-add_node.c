@@ -17,11 +17,12 @@ unsigned int i = 0;
 	if (new == NULL)
 		return (NULL);
 	new->str = strdup(str);
-	if (new->str ++ NULL)
+	if (new->str == NULL)
 		return (NULL);
 	while (str[i] != '\0')
 		i++;
 	new->len = i;
+	new->next = NULL;
 	if (*head == NULL)
 		*head = new;
 	else
