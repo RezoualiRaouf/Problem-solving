@@ -1,1 +1,1 @@
-This dir is for learning linked lists in c
+This dir is for learning linked lists in c.
