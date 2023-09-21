@@ -10,7 +10,6 @@ list_t *current = head;
 
 while (current != NULL)
 {
-	free(current->len);
 	free(current->str);
 	free(current);
 	current = current->next;
