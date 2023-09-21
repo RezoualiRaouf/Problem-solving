@@ -20,7 +20,12 @@ unsigned int i = 0;
 	while (str[i] != '\0')
 		i++;
 	new->len = i;
-	new->next = *head;
-	*head = new;
+	if (*head == NULL)
+		*head = new;
+	else
+	{
+		new->next = *head;
+		*head = new;
+	}
 	return (new);
 }
