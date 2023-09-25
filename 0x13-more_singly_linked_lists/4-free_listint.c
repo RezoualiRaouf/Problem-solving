@@ -9,14 +9,9 @@ void free_listint(listint_t *head)
 {
 listint_t *current = head;
 
-if (head == NULL)
-	return;
-else
-{
 	while (current != NULL)
 	{
 		free(current);
 		current = current->next;
 	}
-}
 }
