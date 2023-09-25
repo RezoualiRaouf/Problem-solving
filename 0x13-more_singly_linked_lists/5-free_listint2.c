@@ -15,5 +15,6 @@ listint_t *next;
 		free(current);
 		current = next;
 	}
+	free(next);
 	*head = NULL;
 }
