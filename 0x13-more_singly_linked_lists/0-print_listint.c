@@ -14,9 +14,10 @@ const listint_t *current = h;
 
 while (current != NULL)
 {
-	printf("%d\n", current->n);
+	printf("%d", current->n);
 	current = current->next;
 	n++;
+	printf("\n");
 }
 return (n);
 }
