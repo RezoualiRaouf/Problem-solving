@@ -10,34 +10,40 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 int fp;
 char *pt;
-ssize_t printed;
+ssize_t bwritten, bread;
 
 	if (filename == NULL)
-		exit(0);
-	pt = malloc(letters);
-	if (pt == NULL)
-		exit(0);
+		return (0);
 	fp = open(filename, O_RDONLY);
 	if (fp == -1)
 	{
 		free(pt);
-		exit(0);
+		return (0);
 	}
 
-	printed = read(fp, pt, letters);
-	if (printed  == -1)
+	pt = malloc(letters);
+	if (pt == NULL)
 	{
-		free(pt);
 		close(fp);
-		exit(0);
+		return (0);
 	}
-	if (write(STDOUT_FILENO, pt, printed) == -1)
+
+	bread = read(fp, pt, letters);
+	if (bread  == -1)
 	{
 		free(pt);
 		close(fp);
-		exit(0);
+		return (0);
+	}
+
+	bwritten = write(STDOUT_FILENO, pt, bread);
+	if (bwritten  == -1 || bwritten != bread)
+	{
+		free(pt);
+		close(fp);
+		return (0);
 	}
 free(pt);
 close(fp);
-return (printed);
+return (bread);
 }
