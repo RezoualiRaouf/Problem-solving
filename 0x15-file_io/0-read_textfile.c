@@ -16,10 +16,7 @@ ssize_t bwritten, bread;
 		return (0);
 	fp = open(filename, O_RDONLY);
 	if (fp == -1)
-	{
-		free(pt);
 		return (0);
-	}
 
 	pt = malloc(letters);
 	if (pt == NULL)
