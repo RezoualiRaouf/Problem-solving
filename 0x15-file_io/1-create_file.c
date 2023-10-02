@@ -30,16 +30,14 @@ int pt, bwrite;
 	pt = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 	if (pt == -1)
 		return (-1);
-	if (text_content == NULL)
+	if (text_content != NULL)
 	{
-		close(pt);
-		return (-1);
-	}
-	bwrite = write(pt, text_content, _sizeof(text_content));
-	if (bwrite == -1)
-	{
-		close(pt);
-		return (-1);
+		bwrite = write(pt, text_content, _sizeof(text_content));
+		if (bwrite == -1)
+		{
+			close(pt);
+			return (-1);
+		}
 	}
 	close(pt);
 return (1);
