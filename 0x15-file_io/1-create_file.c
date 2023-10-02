@@ -11,7 +11,6 @@ int i = 0;
 
 while (text[i] != '\0')
 	i++;
-i++;
 return (i);
 }
 /**
