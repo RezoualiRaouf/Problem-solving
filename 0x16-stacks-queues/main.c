@@ -1,19 +1,12 @@
-#include <stdio.h>
+#include "main.h" 
 #include <stdlib.h>
 
-  typedef struct{
-    int sommet;
-    int pile[10];
-  }PILE;
-
-  int isempty(PILE p){
-    return p.sommet == -1; // if the condition is correct returns 1, if not returns 0
-  }
-  
 int main(void){
   
-  PILE p;
+
+  PILE *p = malloc(sizeof(PILE));
+  push(p, 6);
   printf("%d\n",isempty(p));
-  
+   printf("%d\n",p->pile[p->sommet - 1]); 
   return 0;
 }
