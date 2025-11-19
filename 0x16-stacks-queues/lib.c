@@ -13,32 +13,35 @@
 
   void push(PILE *p , int val){
   
-  node *new = malloc(sizeof(PILE));
-    new->data = val;
-    new->next = p->sommet;
-   
+  node *newNode = malloc(sizeof(PILE));
+    newNode->data = val;
+    newNode->next = p->sommet;
+    p->sommet = newNode;
+
   }
-/*
-  void pop(PILE *p){
+  int pop(PILE *p){
+    
     if (isempty(p)) {
       printf("the stack is empty there is nothing to pop !\n");
-      return;
+      return 0;
     }
-    int val = p->pile[p->sommet--];
-    printf("the value %d was poped out of the stack\n",val);
+    
+    node *temp = p->sommet;
+    int val = temp->data;
+    p->sommet = p->sommet->next;
+    free(temp);
+    return val;
   }
 
-  void peak(PILE *p){
+   int peak(PILE *p){
     if (isempty(p)) {
       printf("stack is empty \n");
-      return;
+      return 0;
     }
-
-    int val = p->pile[p->sommet];
-    printf("the top value in the stack is : %d\n",val);
-
+    int val = p->sommet->data;
+    return val;
    }
-
+/*
    void print_stack(PILE *p){
     if (isempty(p)) {
       printf("stack is empty \n");

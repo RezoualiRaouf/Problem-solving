@@ -18,8 +18,8 @@ typedef struct {
 int isempty(PILE *p);
 int isfull(PILE *p);
 void push(PILE *p , int val);
-void pop(PILE *p); 
-void peak(PILE *p);
+int pop(PILE *p); 
+int peak(PILE *p);
 void print_stack(PILE *p);
 bool isValExist(PILE *p, int val);
 
