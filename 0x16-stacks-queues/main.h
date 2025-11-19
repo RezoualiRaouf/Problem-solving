@@ -4,11 +4,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#define MAX 10
-  typedef struct{
-    int sommet;
-    int pile[MAX];
-  }PILE;
+
+
+typedef struct node{
+  int data;
+  struct node *next;
+}node;
+ 
+typedef struct {
+  node *sommet;
+} PILE;
 
 int isempty(PILE *p);
 int isfull(PILE *p);
@@ -17,4 +22,5 @@ void pop(PILE *p);
 void peak(PILE *p);
 void print_stack(PILE *p);
 bool isValExist(PILE *p, int val);
+
 #endif

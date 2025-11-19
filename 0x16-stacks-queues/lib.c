@@ -1,24 +1,24 @@
 #include "main.h"
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
 
   
   int isempty(PILE *p){
-    return p->sommet == -1; // if the condition is correct returns 1, if not returns 0
+    if (p->sommet == NULL)
+      return 1;
+    return 0;
   }
   
-  int isfull(PILE *p){
-    return p->sommet == MAX -1;
-  }
- 
-  void push(PILE *p , int val){
-    if (isfull(p)) {
-      printf("the stack is full can't push more values !\n");
-      return;
-    }
-    p->pile[++(p->sommet)] = val; 
-  }
 
+  void push(PILE *p , int val){
+  
+  node *new = malloc(sizeof(PILE));
+    new->data = val;
+    new->next = p->sommet;
+   
+  }
+/*
   void pop(PILE *p){
     if (isempty(p)) {
       printf("the stack is empty there is nothing to pop !\n");
@@ -72,3 +72,4 @@
     printf("the value %d was not found in the stack\n",val);
     return false;
    }
+    */
